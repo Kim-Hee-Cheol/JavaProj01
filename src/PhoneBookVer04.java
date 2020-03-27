@@ -1,13 +1,16 @@
 
-import ver03.PhoneBookManager;
-import ver03.PhoneInfo;
+import ver04.PhoneBookManager;
+import ver04.PhoneInfo;
 import java.util.Scanner;
 
-public class PhoneBookVer03 {
+public class PhoneBookVer04 {
 	
+
+
 	public static void main(String[] args) {
 		
 		PhoneBookManager manager = new PhoneBookManager(100);
+		
 		
 		Scanner scan = new Scanner(System.in);
 		while(true) {

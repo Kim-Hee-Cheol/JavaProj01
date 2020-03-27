@@ -1,32 +1,35 @@
 
-import ver03.PhoneBookManager;
-import ver03.PhoneInfo;
+import ver05.PhoneBookManager;
+import ver05.PhoneInfo;
+import ver05.SubMenuItem;
+import ver05.MenuItem;
+
 import java.util.Scanner;
 
-public class PhoneBookVer03 {
+public class PhoneBookVer05 implements MenuItem,SubMenuItem{
 	
+
+
 	public static void main(String[] args) {
 		
 		PhoneBookManager manager = new PhoneBookManager(100);
+		
 		
 		Scanner scan = new Scanner(System.in);
 		while(true) {
 			manager.printMenu();
 			int choice = scan.nextInt();
 			switch(choice) {
-			case 1:
+			case MenuItem.INPUT:
 				manager.dataInput();
 				break;
-			case 2:
+			case MenuItem.SEARCH:
 				manager.dataSearch();
 				break;
-			case 3:
+			case MenuItem.DELETE:
 				manager.deleteInfo();
 				break;
-			case 4:
-				manager.dataAllShow();
-				break;
-			case 5:
+			case MenuItem.EXIT:
 				System.out.println("프로그램을 종료합니다.");
 				return;
 			}

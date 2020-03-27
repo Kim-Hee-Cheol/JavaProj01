@@ -22,7 +22,7 @@ public class PhoneInfo {
 	public void showAllData() {
 		System.out.println("이름:"+ name);
 		System.out.println("전화번호:"+ phoneNumber);
-		System.out.println("주소:"+ birthday);
+		System.out.println("생년월일:"+ birthday);
 	}
 	//정보출력용 메소드
 	public void showPhoneInfo() {
