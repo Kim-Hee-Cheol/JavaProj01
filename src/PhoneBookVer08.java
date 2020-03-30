@@ -1,14 +1,14 @@
 
-import ver06.PhoneBookManager;
-import ver06.PhoneInfo;
-import ver06.SubMenuItem;
-import ver06.MenuItem;
-import ver06.MenuSelectException;
+import ver08.PhoneBookManager;
+import ver08.PhoneInfo;
+import ver08.SubMenuItem;
+import ver08.MenuItem;
+import ver08.MenuSelectException;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class PhoneBookVer06 implements MenuItem,SubMenuItem{
+public class PhoneBookVer08 implements MenuItem,SubMenuItem{
 	
 	public static void main(String[] args) {
 		
@@ -19,7 +19,7 @@ public class PhoneBookVer06 implements MenuItem,SubMenuItem{
 			try {
 				int choice = scan.nextInt();
 				if(choice>=1 && choice<=5) {
-					switch(choice) {
+					switch(choice) { 
 						case MenuItem.INPUT:
 							manager.dataInput();
 							break;
@@ -30,12 +30,14 @@ public class PhoneBookVer06 implements MenuItem,SubMenuItem{
 							manager.deleteInfo();
 							break;
 						case 4:
-							manager.dataAllShow();
+							manager.callin();
 							break;
 						case MenuItem.EXIT:
+							manager.saveAddressInfo();
 							System.out.println("프로그램을 종료합니다.");
 						return;	
 					}
+					
 				}
 				else {
 					throw new MenuSelectException("1~5사이의 값만 입력해주세요"); 
@@ -49,5 +51,6 @@ public class PhoneBookVer06 implements MenuItem,SubMenuItem{
 			}
 			continue;
 		}
+		
 	}
 }

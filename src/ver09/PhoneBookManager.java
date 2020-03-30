@@ -1,12 +1,12 @@
-package ver04;
+package ver09;
 
-import ver04.PhoneInfo;
+import ver09.PhoneInfo;
 import java.util.Scanner;
 
 
 public class PhoneBookManager {
 	
-	public PhoneBookManager(int num) {
+	public  PhoneBookManager(int num) {
 		myAddress = new PhoneInfo[num];
 		numOfAddress = 0;
 	}
@@ -14,49 +14,29 @@ public class PhoneBookManager {
 	private PhoneInfo[] myAddress;
 	private int numOfAddress;
 	
-	public void printMenu() {
+	public static void printMenu() {
 		System.out.println("선택하세요...");
 		System.out.println("1.데이터 입력");
 		System.out.println("2.데이터 검색");
 		System.out.println("3.데이터 삭제");
 		System.out.println("4.주소록 출력");
 		System.out.println("5.프로그램 종료");
-		System.out.println("선택 : ");
+		System.out.println("선택 :");
 	}
 	
 	public void dataInput() {
 		 
 		 Scanner scan = new Scanner(System.in);
-		 String IName,IPhone,ICompany,Imajor;
-		 int Igrade, select;
+		 String Name,Phone,Bir;
 
 		 System.out.println("데이터 입력을 시작합니다...");
-		 System.out.println("1.일반,2.회사,3.동창");
-		 System.out.println("선택>> ");
-		 select = scan.nextInt();
-		 scan.nextLine();
+		 System.out.print("이름:");Name = scan.nextLine();
+		 System.out.print("전화번호:");Phone = scan.nextLine();
+		 System.out.print("생년월일:");Bir = scan.nextLine();		 
 		 
-		 System.out.print("이름:");IName = scan.nextLine();
-		 System.out.print("전화번호:");IPhone = scan.nextLine();
-		 
-	
-		 switch(select) {
-		 case 1:
-			 PhoneInfo info = new PhoneInfo(IName, IPhone);
-			 myAddress[numOfAddress++] = info;
-			 break;
-		 case 2:
-			 System.out.print("전공:");Imajor = scan.nextLine();
-			 System.out.print("학년:");Igrade = scan.nextInt();
-			 PhoneSchoolInfo sc = new PhoneSchoolInfo(IName, IPhone, Imajor, Igrade);
-			 myAddress[numOfAddress++] = sc;
-			 break;
-		 case 3: 
-			 System.out.print("회사:"); ICompany = scan.nextLine();
-			 PhoneCompanyInfo co = new PhoneCompanyInfo(IName,IPhone,ICompany);
-			 myAddress[numOfAddress++] = co;
-			 break;
-		 }
+		 PhoneInfo info = new PhoneInfo(Name, Phone, Bir);
+		 myAddress[numOfAddress++] = info;
+
 		 System.out.println("데이터 입력이 완료되었습니다.");
 		 
 	}

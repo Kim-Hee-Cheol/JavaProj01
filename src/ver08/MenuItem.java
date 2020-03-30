@@ -1,4 +1,4 @@
-package ver06;
+package ver08;
 
 public interface MenuItem {
 
