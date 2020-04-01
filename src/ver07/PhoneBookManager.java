@@ -97,12 +97,20 @@ public class PhoneBookManager {
 	public void dataSearch() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("데이터 검색을 시작합니다..");
+		System.out.print("이름: ");
 		String searchName = scan.nextLine();
+		
 		for(int i=0 ; i<numOfAddress ; i++) {
-			if(searchName.compareTo(myAddress[i].name)==0) {
+			if(myAddress[i].name==null) {
+				break;
+				}
+			if(searchName.compareTo(myAddress[i].name)!=0) {
+				System.out.println("데이터가 없습니다.");
+			}
+			else {
 				myAddress[i].showAllData();
 				System.out.println("데이터 검색이 완료되었습니다.");
-			}
+			}				
 		}
 	}
 	

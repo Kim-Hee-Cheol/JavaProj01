@@ -16,6 +16,12 @@ public class PhoneCompanyInfo extends PhoneInfo{
 		System.out.println("전화번호:"+ phoneNumber);
 		System.out.println("회사:"+ comName);
 	}
+	@Override
+	public String toString() {
+		return "이름=" + name + ", 전화번호=" + phoneNumber + "회사=" + comName;
+
+
+	}
 	
 }
 	

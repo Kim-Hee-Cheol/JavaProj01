@@ -44,7 +44,8 @@ public class DataInput {
 			stmt = con.createStatement();
 			//4.SQL(쿼리문)문 작성
 			String sql = "INSERT INTO phonebook_tb VALUES "
-					+" ('김길동', '010-1111-1111', '2016-05-05') ";
+					+" ('김길동', '010-1111-3333', '1997-06-04') ";
+			
 			
 			//5.쿼리 실행 및 결과값 반환
 			/*

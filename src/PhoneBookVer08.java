@@ -12,7 +12,7 @@ public class PhoneBookVer08 implements MenuItem,SubMenuItem{
 	
 	public static void main(String[] args) {
 		
-		PhoneBookManager manager = new PhoneBookManager(100);
+		PhoneBookManager manager = new PhoneBookManager();
 		while(true) {
 			Scanner scan = new Scanner(System.in);
 			manager.printMenu();
@@ -30,7 +30,7 @@ public class PhoneBookVer08 implements MenuItem,SubMenuItem{
 							manager.deleteInfo();
 							break;
 						case 4:
-							manager.callin();
+							manager.dataAllShow();
 							break;
 						case MenuItem.EXIT:
 							manager.saveAddressInfo();
